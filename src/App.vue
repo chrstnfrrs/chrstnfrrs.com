@@ -6,6 +6,21 @@
   <router-view />
 </template>
 
+<script>
+import { defineComponent } from "vue";
+import { createClient, provideClient } from "@urql/vue";
+export default defineComponent({
+  setup() {
+    const client = createClient({
+      // USE ECOMMERCE POC MERCHANDISE CHECKOUT SANITY
+      url: "https://3eriodbh.api.sanity.io/v1/graphql/production/default",
+    });
+
+    provideClient(client);
+  },
+});
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
