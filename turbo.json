@@ -1,8 +1,7 @@
 {
-    "pipeline": {
-      "dev": {
-        "cache": false
-      }
+  "pipeline": {
+    "dev": {
+      "cache": false
     }
   }
-  
+}

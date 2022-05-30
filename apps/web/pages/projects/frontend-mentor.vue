@@ -1,11 +1,13 @@
 <template>
-    <div class="frontend-mentor-projects">
-      <FrontendMentorCard v-for="repo in data" :key="repo.id" :repo="repo" />
-    </div>
+  <div class="frontend-mentor-projects">
+    <FrontendMentorCard v-for="repo in data" :key="repo.id" :repo="repo" />
+  </div>
 </template>
 
 <script setup>
-const { data } = await useAsyncData('frontend-mentor-projects', () => $fetch('/api/frontend-mentor-projects'))
+const { data } = await useAsyncData('frontend-mentor-projects', () =>
+  $fetch('/api/frontend-mentor-projects'),
+);
 </script>
 
 <style>
