@@ -18,14 +18,19 @@
 
 <script setup>
 const props = defineProps({
-  repo: Object,
+  repo: {
+    type: Object,
+    default: () => ({}),
+  },
 });
 
-const name = props.repo.name.replace(/-/g, ' ');
-const website = props.repo.homepageUrl;
-const github = props.repo.url;
-const description = props.repo.description;
-const framework = props.repo.framework;
+const reactiveProps = toRefs(props);
+
+const name = reactiveProps.repo.value.name.replace(/-/g, ' ');
+const website = reactiveProps.repo.value.homepageUrl;
+const github = reactiveProps.repo.value.url;
+const description = reactiveProps.repo.value.description;
+const framework = reactiveProps.repo.value.framework;
 </script>
 
 <style>

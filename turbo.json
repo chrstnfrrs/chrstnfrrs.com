@@ -2,6 +2,9 @@
   "pipeline": {
     "dev": {
       "cache": false
+    },
+    "lint": {
+      "outputs": []
     }
   }
 }

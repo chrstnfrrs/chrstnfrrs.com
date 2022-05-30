@@ -25,7 +25,7 @@ const frameworks = ['vue', 'react', 'solid', 'svelte'];
 
 // @ts-ignore
 export default defineEventHandler(async (event) => {
-  const { data } = (await $fetch('https://api.github.com/graphql', {
+  const { data } = await $fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
     body: {
       query: GITHUB_QUERY,
     },
-  })) as any;
+  });
 
   const projects = data.user.repositories.nodes
     .filter((repo) =>
