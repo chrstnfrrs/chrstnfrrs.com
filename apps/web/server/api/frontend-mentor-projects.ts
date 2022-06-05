@@ -24,7 +24,10 @@ const GITHUB_QUERY = `query {
 const frameworks = ['vue', 'react', 'solid', 'svelte'];
 
 // @ts-ignore
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async ({ req }) => {
+  // @ts-ignore
+  const featured = req.body?.featured;
+
   const { data } = await $fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {
@@ -40,6 +43,13 @@ export default defineEventHandler(async (event) => {
       repo.repositoryTopics.nodes.some(
         (repoTopic) => repoTopic.topic.name === 'frontend-mentor',
       ),
+    )
+    .filter((repo) =>
+      featured
+        ? repo.repositoryTopics.nodes.some(
+            (repoTopic) => repoTopic.topic.name === 'featured',
+          )
+        : true,
     )
     .reduce((acc, repo) => {
       const framework = repo.repositoryTopics.nodes.find((repoTopic) =>
