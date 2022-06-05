@@ -2,6 +2,7 @@
   <div class="frontend-mentor-card">
     <div class="frontend-mentor-card__preview-container">
       <iframe
+        :title="repo.name"
         class="frontend-mentor-card__preview-link"
         :src="repo.homepageUrl"
       />
