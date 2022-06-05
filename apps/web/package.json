@@ -10,10 +10,11 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.1",
+    "@nuxt/content": "^2.0.1",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-vue": "^9.0.1"
+    "eslint-plugin-vue": "^9.0.1",
+    "nuxt": "3.0.0-rc.3"
   },
   "dependencies": {
     "ohmyfetch": "^0.4.15"
