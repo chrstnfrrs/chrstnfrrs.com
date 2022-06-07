@@ -3,7 +3,7 @@ import { defineNuxtConfig } from 'nuxt';
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   components: true,
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@unocss/nuxt'],
   content: {
     highlight: {
       theme: 'css-variables',

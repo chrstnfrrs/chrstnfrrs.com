@@ -1,6 +1,10 @@
 <template>
-  <div style="display: flex; flex-direction: column; gap: 1rem">
-    <NuxtLink to="/projects">Projects</NuxtLink>
-    <NuxtLink to="/references">References</NuxtLink>
+  <div class="flex flex-col gap-2">
+    <NuxtLink class="color-#101010 decoration-none" to="/projects"
+      >Projects</NuxtLink
+    >
+    <NuxtLink class="color-#101010 decoration-none" to="/references"
+      >References</NuxtLink
+    >
   </div>
 </template>
