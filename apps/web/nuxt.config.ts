@@ -4,6 +4,9 @@ import { defineNuxtConfig } from 'nuxt';
 export default defineNuxtConfig({
   components: true,
   modules: ['@nuxt/content', '@unocss/nuxt'],
+  unocss: {
+    attributify: true,
+  },
   content: {
     highlight: {
       theme: 'css-variables',

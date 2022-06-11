@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-col gap-2">
-    <NuxtLink class="color-#101010 decoration-none" to="/projects"
+    <NuxtLink color="#101010" decoration="none" to="/projects"
       >Projects</NuxtLink
     >
-    <NuxtLink class="color-#101010 decoration-none" to="/references"
+    <NuxtLink color="#101010" decoration="none" to="/references"
       >References</NuxtLink
     >
   </div>
